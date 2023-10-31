@@ -7,39 +7,54 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to DesignGR</h1>
+        <h1>DesignGR</h1>
     </header>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Fulton Street East</a></li>
+            <li><a href="#">Division Ave South</a></li>
+            <li><a href="#">Michigan Street Northeast</a></li>
+            <li><a href="#">Diamond Ave Northeast</a></li>
+            <li><a href="#">Madison Ave Southeast</a></li>
+            <li><a href="#">Wealthy Street Southeast</a></li>
         </ul>
     </nav>
-    <section>
-        <h2>About Me</h2>
-        <p>This is a paragraph about me.</p>
-    </section>
-    <footer>
-        <p>&copy; DesignGR</p>
-    </footer>
-</body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Simple Map</title>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+    
+        <script>
+            function initMap() {
+                // The location of Downtown Grand Rapids
+                var myLatLng = {lat: 42.9634, lng: -85.6681};
+    
+                // The map, centered at Downtown Grand Rapids
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 14, center: myLatLng});
+    
+                // The marker, positioned at Downtown Grand Rapids
+                var marker = new google.maps.Marker({position: myLatLng, map: map});
+            }
+        </script>
+    
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap">
+        </script>
+    </body>
+    </html>
+    
 
-</head>
-<body>
-        <main>
-<head>
-<header>
-<h1>
-
-
-</h1>
-
-</header>        
-
-
-
-</head>
 <div>
         <div class="small-screen-1"></div>"
         <div class="small-screen-2"></div>"
