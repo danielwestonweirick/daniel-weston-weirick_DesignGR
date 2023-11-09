@@ -1,108 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DesignGR</title>
-    <style>
-        body {
-            background-image: url("background.jpg");
-            background-size: cover;
-        }
-        header, nav {
-            background-color: #333;
-            color: #ffffff;
-            padding: 10px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        nav li {
-            float: left;
-        }
-        nav li a {
-            display: block;
-            color: rgb(194, 194, 194);
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav li a:hover {
-            background-color: #111;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        footer ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        footer li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        footer li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
     <div>
-        <header>
-            <h1>DesignGR</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Fulton Street East</a></li>
-                <li><a href="#">Division Ave South</a></li>
-                <li><a href="#">Michigan Street Northeast</a></li>
-                <li><a href="#">Diamond Ave Northeast</a></li>
-                <li><a href="#">Madison Ave Southeast</a></li>
-                <li><a href="#">Wealthy Street Southeast</a></li>
-            </ul>
-        </nav>
+      <header>
+        <h1>DesignGR</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Fulton Street East</a></li>
+          <li><a href="#">Division Ave South</a></li>
+          <li><a href="#">Michigan Street Northeast</a></li>
+          <li><a href="#">Diamond Ave Northeast</a></li>
+          <li><a href="#">Madison Ave Southeast</a></li>
+          <li><a href="#">Wealthy Street Southeast</a></li>
+        </ul>
+      </nav>
     </div>
     <h2>Grand Rapids, Michigan</h2>
     <div id="map">Loading map...</div>
     <footer>
-        <ul>
-            <li><a href="#">Contact Us</a></li>
-
-        </ul>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
     </footer>
     <script>
-        function initMap() {
-            // The location of Downtown Grand Rapids
-            var myLatLng = {lat: 42.9634, lng: -85.6681};
+      function initMap() {
+        // The location of Downtown Grand Rapids
+        var myLatLng = { lat: 42.9634, lng: -85.6681 };
 
-            // The map, centered at Downtown Grand Rapids
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 14, center: myLatLng});
+        // The map, centered at Downtown Grand Rapids
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: myLatLng,
+        });
 
-            // The marker, positioned at Downtown Grand Rapids
-            var marker = new google.maps.Marker({position: myLatLng, map: map});
-        }
+        // The marker, positioned at Downtown Grand Rapids
+        var marker = new google.maps.Marker({ position: myLatLng, map: map });
+      }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap">
-    </script>
-</body>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap"
+    ></script>
+  </body>
 </html>
