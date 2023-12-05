@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignGR - Madison Ave Southeast</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+      
+        body {
+              font-family: 'Arial', sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #000000;
+              background-image: url('images/backg.jpg'); 
+            background-size: cover; 
+          }
+  
+          #container {
+              max-width: 1200px;
+              margin: 0 auto;
+              background-color: #000000;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+  
+          header {
+              background-color: #000000;
+              color: #fff;
+              padding: 10px 0;
+              text-align: center;
+          }
+          
+          header a img {
+              max-width: 800px; 
+              height: auto;
+          }
+  
+          nav {
+              background-color: #1e016f;
+              color: #fff;
+              padding: 10px;
+          }
+  
+          nav ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              justify-content: space-around;
+          }
+  
+          nav a {
+              text-decoration: none;
+              color: #fff;
+              font-weight: bold;
+              font-size: 18px;
+          }
+  
+          .current {
+              border-bottom: 2px solid #fff;
+          }
+  
+          section {
+              padding: 20px;
+          }
+  
+          h2, h3 {
+              color: #ffffff;
+          }
+  
+          ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+          }
+  
+          li {
+              margin-bottom: 10px;
+          }
+  
+          footer {
+              background-color: #1e016f;
+              color: #fff;
+              padding: 10px 0;
+              text-align: center;
+          }
+  
+          footer ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+          }
+  
+          footer a {
+              text-decoration: none;
+              color: #fff;
+              margin: 0 10px;
+          }
+  
+          section img {
+              max-width: 60%; 
+              height: auto;
+          }
+      </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="DesignGR"></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fulton.html">Fulton Street East</a></li>
+                <li><a href="division.html">Division Ave South</a></li>
+                <li><a href="michigan.html">Michigan Street Northeast</a></li>
+                <li><a href="diamond.html">Diamond Ave Northeast</a></li>
+                <li class="current"><a href="madison.html">Madison Ave Southeast</a></li>
+                <li><a href="wealthy.html">Wealthy Street Southeast</a></li>
+            </ul>
+        </nav>
+        <section>
+            <a href="index.html"><img src="images/madisonave.png" alt="madisonave"></a>
+            <p>Explore the cultural and artistic scene of Madison Ave Southeast, a dynamic area with a rich cultural heritage and a thriving arts community.</p>
+
+            <h3>Cultural Attractions</h3>
+            <ul>
+                <li>Art galleries and studios</li>
+                <li>Live performance venues</li>
+                <li>Cultural festivals and events</li>
+              
+            </ul>
+
+            <h3>Artistic Community</h3>
+            <p>Madison Ave Southeast is home to a vibrant artistic community. Discover local artists, attend art events, and immerse yourself in the creative spirit of the neighborhood.</p>
+           
+
+            <h3>Local Events</h3>
+            <p>Stay updated on local events happening on Madison Ave Southeast. From art exhibitions to music festivals, there's always something exciting to experience in this cultural hub.</p>
+            
+            <div id="map">Loading map...</div>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        function initMap() {
+            // The location of Wealthy Street Southeast
+            var myLatLng = {lat: 42.839380, lng: -85.654310}; // Replace with actual coordinates
+
+            // The map, centered at Wealthy Street Southeast
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 14, center: myLatLng});
+
+            // The marker, positioned at Wealthy Street Southeast
+            var marker = new google.maps.Marker({position: myLatLng, map: map});
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap"></script>
+</body>
+
+</html>

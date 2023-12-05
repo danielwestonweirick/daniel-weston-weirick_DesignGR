@@ -3,91 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignGR</title>
+    <title>DesignGR - Home</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <style>
         body {
-            background-image: url("background.jpg");
-            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: url('images/backg.jpg'); 
+            background-size: cover; 
         }
-        header, nav {
-            background-color: #333;
-            color: #ffffff;
-            padding: 10px;
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #000000;
+            padding: 10px 0;
             text-align: center;
         }
-        h1 {
-            font-size: 36px;
+
+        header a img {
+            max-width: 800px; 
+            height: auto;
         }
+
+        nav {
+            background-color: #1e016f;
+            color: #fff;
+            padding: 10px;
+        }
+
         nav ul {
-            list-style-type: none;
-            margin: 0;
+            list-style: none;
             padding: 0;
-            overflow: hidden;
-        }
-        nav li {
-            float: left;
-        }
-        nav li a {
-            display: block;
-            color: rgb(194, 194, 194);
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        nav li a:hover {
-            background-color: #111;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        footer ul {
-            list-style-type: none;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
         }
-        footer li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        footer li a {
-            color: #fff;
+
+        nav a {
             text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
         }
-        #map {
-            height: 400px;
-            width: 100%;
+
+        section img {
+            max-width: 40%; 
+            height: auto;
         }
+
+        section img {
+            max-width: 30%; 
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
-    <div>
+    <div id="container">
         <header>
-            <h1>DesignGR</h1>
-        </header>
+            <a href="index.html"><img src="images/logo.png" alt="DesignGR"></a>
+        </header>        
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Fulton Street East</a></li>
-                <li><a href="#">Division Ave South</a></li>
-                <li><a href="#">Michigan Street Northeast</a></li>
-                <li><a href="#">Diamond Ave Northeast</a></li>
-                <li><a href="#">Madison Ave Southeast</a></li>
-                <li><a href="#">Wealthy Street Southeast</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="fulton.html">Fulton Street East</a></li>
+                <li><a href="division.html">Division Ave South</a></li>
+                <li><a href="michigan.html">Michigan Street Northeast</a></li>
+                <li><a href="diamond.html">Diamond Ave Northeast</a></li>
+                <li><a href="madison.html">Madison Ave Southeast</a></li>
+                <li><a href="wealthy.html">Wealthy Street Southeast</a></li>
             </ul>
         </nav>
-    </div>
-    <h2>Grand Rapids, Michigan</h2>
-    <div id="map">Loading map...</div>
-    <footer>
-        <ul>
-            <li><a href="#">Contact Us</a></li>
+        <section>
+            <a href="index.html"><img src="images/welcome.png" alt="Welcome"></a>
+            <p>Explore the diverse neighborhoods of Grand Rapids, Michigan, each with its own unique character and charm.</p>
+            
+            <a href="index.html"><img src="images/OURMISSION.png" alt="OURMISSION"></a>
+            <p>DesignGR is dedicated to showcasing the beauty and creativity found in the architecture and streets of Grand Rapids. Join us on a journey to discover the hidden gems that make this city special.</p>
 
-        </ul>
-    </footer>
+            <a href="index.html"><img src="images/FEATURED.png" alt="FEATURED"></a>
+            <ul>
+                <li>Fulton Street East - Known for its historic buildings and vibrant atmosphere.</li>
+                <li>Division Ave South - A blend of culture, art, and community.</li>
+                <li>Michigan Street Northeast - Home to a mix of residential and commercial spaces.</li>
+                <li>Diamond Ave Northeast - A neighborhood with a rich history and diverse community.</li>
+                <li>Madison Ave Southeast - Explore the cultural and artistic scene of this dynamic area.</li>
+                <li>Wealthy Street Southeast - Known for its trendy shops, restaurants, and local businesses.</li>
+            </ul>
+
+            <div id="map">Loading map...</div>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </footer>
+    </div>
+
     <script>
         function initMap() {
             // The location of Downtown Grand Rapids
@@ -101,8 +123,6 @@
             var marker = new google.maps.Marker({position: myLatLng, map: map});
         }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap">
-    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap"></script>
 </body>
 </html>

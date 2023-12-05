@@ -1,101 +1,112 @@
 body {
-    background-image: url("background.jpg");
-    background-size: cover;
-}
-header, nav {
-    background-color: #333;
+    background-color: #000000;
+    margin: 0;
+    font-family: 'Avenir', sans-serif;
     color: #ffffff;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+header {
+    background-color: #3498db; 
+    color: #ecf0f1; 
     padding: 10px;
     text-align: center;
 }
+
+header h1 a {
+    text-decoration: none; 
+    color: #ecf0f1;
+}
+
+header h1 a:hover {
+    color: #fff; 
+}
+
 h1 {
     font-size: 36px;
+    margin: 0;
 }
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
+
 nav li {
-    float: left;
+    display: inline-block;
+    margin-right: 10px; 
 }
+
+nav li:last-child {
+    margin-right: 0; 
+}
+
 nav li a {
     display: block;
-    color: rgb(194, 194, 194);
+    color: #ecf0f1;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
+
 nav li a:hover {
-    background-color: #111;
+    background-color: #000000; 
 }
+
+section {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#map {
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
 footer {
-    background-color: #333;
+    background-color: #1e016f; 
     color: #fff;
     padding: 10px;
     text-align: center;
+    clear: both; 
 }
+
 footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
+
 footer li {
     display: inline-block;
     margin: 0 10px;
 }
+
 footer li a {
     color: #fff;
     text-decoration: none;
 }
-#map {
-    height: 400px;
-    width: 100%;
+
+footer li a:hover {
+    text-decoration: underline;
 }
-</style>
-</head>
-<body>
-<div>
-<header>
-    <h1>DesignGR</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Fulton Street East</a></li>
-        <li><a href="#">Division Ave South</a></li>
-        <li><a href="#">Michigan Street Northeast</a></li>
-        <li><a href="#">Diamond Ave Northeast</a></li>
-        <li><a href="#">Madison Ave Southeast</a></li>
-        <li><a href="#">Wealthy Street Southeast</a></li>
-    </ul>
-</nav>
-</div>
-<h2>Grand Rapids, Michigan</h2>
-<div id="map">Loading map...</div>
-<footer>
-<ul>
-    <li><a href="#">Contact Us</a></li>
-
-</ul>
-</footer>
-<script>
-function initMap() {
-    // The location of Downtown Grand Rapids
-    var myLatLng = {lat: 42.9634, lng: -85.6681};
-
-    // The map, centered at Downtown Grand Rapids
-    var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 14, center: myLatLng});
-
-    // The marker, positioned at Downtown Grand Rapids
-    var marker = new google.maps.Marker({position: myLatLng, map: map});
-}
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap">
-</script>
-</body>
-</html>
