@@ -4,17 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DesignGR - Diamond Ave Northeast</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" type="text/css" href="main.css">
     <style>
-      
-      body {
+        body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #000000;
-            background-image: url('images/backg.jpg'); 
-            background-size: cover; 
+            background-image: url('images/backg.jpg');
+            background-size: cover;
         }
 
         #container {
@@ -30,9 +29,9 @@
             padding: 10px 0;
             text-align: center;
         }
-        
+
         header a img {
-            max-width: 800px; 
+            max-width: 800px;
             height: auto;
         }
 
@@ -65,7 +64,8 @@
             padding: 20px;
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             color: #ffffff;
         }
 
@@ -77,6 +77,44 @@
 
         li {
             margin-bottom: 10px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #1e016f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #000000;
         }
 
         footer {
@@ -99,7 +137,7 @@
         }
 
         section img {
-            max-width: 60%; 
+            max-width: 60%;
             height: auto;
         }
     </style>
@@ -116,37 +154,27 @@
                 <li><a href="fulton.html">Fulton Street East</a></li>
                 <li><a href="division.html">Division Ave South</a></li>
                 <li><a href="michigan.html">Michigan Street Northeast</a></li>
-                <li class="current"><a href="diamond.html">Diamond Ave Northeast</a></li>
+                <li><a href="diamond.html">Diamond Ave Northeast</a></li>
                 <li><a href="madison.html">Madison Ave Southeast</a></li>
                 <li><a href="wealthy.html">Wealthy Street Southeast</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="current"><a href="contact.html">Contact Us</a></li>
             </ul>
+
         </nav>
         <section>
-            <a href="index.html"><img src="images/diamondave.png" alt="diamondave"></a>
-            <p>Diamond Ave Northeast is a neighborhood with a rich history and a diverse community. Explore the unique character and heritage of this Grand Rapids area.</p>
+            <h1>Let Us Know About Upcoming Events</h1>
+            <form action="process_contact.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <h3>Historical Highlights</h3>
-            <ul>
-                <li>Preservation of historic buildings</li>
-                <li>Cultural events celebrating the neighborhood's history</li>
-                <li>Local community initiatives</li>
-                
-            </ul>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <h3>Diverse Community</h3>
-            <p>Discover the diversity of Diamond Ave Northeast through its residents, cultural events, and community organizations. Engage with the community and learn about its stories.</p>
-           
-            <h3>Community Organizations</h3>
-            <p>Connect with local community organizations dedicated to making a positive impact on Diamond Ave Northeast. Learn about their initiatives and how you can get involved.</p>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            <h4>Upcoming Events</h4>
-            <ul>
-                <li>Annual Children's Christmas Part on December 9th @ St. Isidore's Benevolent Aid Society</li>
-                <li>Game Night on December 10th @ Lotus Brew</li>
-                <li>Fiber Art on December 11th @ Lotus Brew</li>
-            
-            <div id="map">Loading map...</div>
+                <button type="submit">Submit</button>
+            </form>
         </section>
         <footer>
             <ul>
@@ -156,21 +184,6 @@
             </ul>
         </footer>
     </div>
-
-    <script>
-        function initMap() {
-            // The location of Wealthy Street Southeast
-            var myLatLng = {lat: 42.986540, lng: -85.644850}; // Replace with actual coordinates
-
-            // The map, centered at Wealthy Street Southeast
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 14, center: myLatLng});
-
-            // The marker, positioned at Wealthy Street Southeast
-            var marker = new google.maps.Marker({position: myLatLng, map: map});
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzQOXlj0yEjPxugqLSBhteSiUiR17d_D4&callback=initMap"></script>
 </body>
 
 </html>
